@@ -33,4 +33,10 @@ export_design -format xo
 - test -d ~/vitis_ip_cache || mkdir ~/vitis_ip_cache
 v++ --target hw --platform xilinx_u50_gen3x16_xdma_5_202210_1 --link proj/solution/impl/export.xo -o proj.xclbin --remote_ip_cache ~/vitis_ip_cache
 ```
+altra opzione da verificare, queta è quella di giulio che funziona
+
+```bash
+v++ -l -t hw --platform  xilinx_u55c_gen3x16_xdma_3_202210_1 -o output.xclbin export.xo
+```
+
 
