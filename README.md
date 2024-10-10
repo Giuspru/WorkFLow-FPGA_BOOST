@@ -29,5 +29,8 @@ Esportare il design nel formato XO con il comando:
 export_design -format xo
 ```
 ## 5) Compiling as binary image:
+```bash
 - test -d ~/vitis_ip_cache || mkdir ~/vitis_ip_cache
 v++ --target hw --platform xilinx_u50_gen3x16_xdma_5_202210_1 --link proj/solution/impl/export.xo -o proj.xclbin --remote_ip_cache ~/vitis_ip_cache
+```
+
