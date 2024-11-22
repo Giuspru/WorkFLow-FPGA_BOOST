@@ -62,7 +62,7 @@ The command compiles a hardware project intended to run on a specific FPGA platf
 
 ## 5. Injection bitstream in FPGA
 
-Once the **`.xclbin`** file has been created, it will be possible to use it by running the python script launch.py. 
+Once the **`.xclbin`** file has been created, it will be possible to use it by running the python script **`launch.py`**. 
 Generally the file is used to allow interaction between the FPGA and CPU, and use the FPGA as a computational accelerator.
 The following are the main steps:
   - Imports the libraries necessary for communication with the FPGA.
