@@ -1,18 +1,14 @@
 # WorkFLow-FPGA_BOOST
-A step by step guide for a FPGA project 
+This guide is to keep track of the various steps required to take advantage of an FPGA as a computational accelerator. Listed below are the 5 key points of each project.
 
-# Progetto FPGA Accelerator
-
-Questa repository serve per tenere traccia dei vari passaggi necessari per sfruttare una FPGA come acceleratore di calcolo. Di seguito sono elencati i 5 punti fondamentali del progetto.
-
-## 1. Prerequisiti
+## 1. Prerequisites (Ask Mirko)
 
 Per iniziare con il progetto **Workflow_FPGA_BOOST**, assicurati di avere i seguenti prerequisiti:
 
 - **Pacchetti Software Necessari**:
   - Driver specifici per la FPGA utilizzata
   - Librerie di supporto per l'host e la piattaforma FPGA
-  - Pacchetti di sviluppo per il sistema operativo (es. `gcc`, `make`, etc.)
+  - Pacchetti di sviluppo per il sistema operativo ()
 
 - **Versione Vitis**: È richiesto Vitis **(versione minima: X.X)**, aggiornato per supportare le ultime funzionalità di progettazione FPGA.
 
@@ -21,53 +17,58 @@ Per iniziare con il progetto **Workflow_FPGA_BOOST**, assicurati di avere i segu
 > **Nota**: Verifica che il tuo ambiente sia correttamente configurato seguendo la documentazione ufficiale di Vitis e delle librerie FPGA specifiche.
 
 
-## 2. Implementazione Del Software
+## 2. Software Implementation
 
-Per ogni progetto che desideri implementare, sarà creata una cartella dedicata con il nome dell'operazione che intendi eseguire, o un nome che ne descriva chiaramente lo scopo.
+For each project you wish to implement, a dedicated folder will be created with the name of the operation you intend to perform, or a name that clearly describes its purpose.
 
-Ogni cartella di progetto conterrà i seguenti file principali:
+Each project folder will contain the following main files:
 
-- **run_hls.tcl**: Questo file è utilizzato per eseguire la parte di High-Level Synthesis (HLS) del progetto. Contiene gli script necessari per sintetizzare il codice in un formato compatibile con la FPGA.
+- **run_hls.tcl**:  This file is used to run the High-Level Synthesis (HLS) part of the project. It contains the bash scripts needed to synthesize the code into an FPGA-compatible format.
   
-- **testbench.cc**: Un file C++ che contiene il testbench per verificare il corretto funzionamento della logica FPGA. Esso simula l'esecuzione dell'algoritmo sviluppato per validare i risultati prima di caricare il progetto sulla FPGA.
+- **testbench.cc**: A C++ file that contains the testbench to verify the correct operation of the FPGA logic. It simulates the execution of the developed algorithm to validate the results before loading the design on the FPGA.
 
-- **launch.py**: Un script Python che automatizza il processo di esecuzione del progetto, interfacciandosi con gli strumenti di sviluppo per eseguire la compilazione, il caricamento e il monitoraggio delle prestazioni sulla FPGA.
+- **launch.py**:  A Python script that automates the design execution process by interfacing with the development tools to perform compilation, loading, and performance monitoring on the FPGA. Specifically, the script will allocate memory, convey data from the local to the FPGA, perform the required operations, transport the results obtained from the accelerator, and finally free memory and buffers from the hardware. 
 
-Inoltre, ogni cartella conterrà una sottocartella chiamata **`src`**, che conterrà:
+In addition, each folder will contain a subfolder called **`src`**, which contains:
 
-- **func.cc**: Questo file contiene le implementazioni delle funzioni in C++ che saranno successivamente utilizzate nell'implementazione della logica FPGA.
+- **func.cc**: This file contains the C++ function implementations that will later be used in the FPGA logic implementation. And which will be called from the file **run_hls.tcl**, to fix them as top functions.
 
-- **func.h**: Il file header che dichiara le funzioni definite in `func.cc`, fornendo le interfacce necessarie per la loro implementazione nell'FPGA.
+- **func.h**: The header file that declares the functions defined in `func.cc`, providing the necessary interfaces for their implementation in the FPGA.
 
-Questa struttura permette di gestire in modo chiaro il codice sorgente delle funzioni da accelerare e separa le logiche di test, configurazione e implementazione nella FPGA.
+This structure allows clear management of the source code of the functions to be accelerated and separates the logic of testing, configuration, and implementation in the FPGA.
 
 
-## 3. Implementazione della Simulazione C e della Sintesi del Software tramite Vitis
+## 3. Implementation of C Simulation and Software Synthesis through Vitis
 
-**Sintesi tramite Vitis HLS**:
-   - Una volta che il progetto è pronto, la sintesi viene avviata utilizzando il comando seguente:
+**Synthesis via Vitis HLS**:
+   - Once the project is ready, synthesis is started using the following command:
    
      ```bash
      vitis_hls -f run_hls.tcl
      ```
    
-   - Il file `run_hls.tcl` contiene tutte le configurazioni necessarie per avviare la sintesi, tra cui i testbench, le librerie e le opzioni di compilazione. Durante l'esecuzione del comando, Vitis HLS compila il codice C e genera un'implementazione hardware ottimizzata.
+   - The `run_hls.tcl` file contains all the configurations needed to start the synthesis, including testbenches, the assignment of the top function that will be implemented in hardware, simulation and export comands. The `run_hls.tcl` file varies from project to project, depending on the operation to be developed, but retains some common elements, such as the target board.
+
+> **Nota**: The file `run_hls.tcl` is used to automate processes. To have more control over what is done, you can run each command individually via bash.
 
 ## 4. Compiling as Binary Image
 
-Per compilare il progetto come immagine binaria da caricare sull'FPGA, è necessario eseguire il comando bash seguente:
+To compile the project as a binary image to be uploaded to the FPGA, you need to run the following bash command:
 
 ```bash
 v++ -l -t hw --platform xilinx_u55c_gen3x16_xdma_3_202210_1 -o nomefile.xclbin ./path/filexport.xo
 ```
+The command compiles a hardware project intended to run on a specific FPGA platform. Specifically, we are creating a single binary file (filename.xclbin), which will be loaded onto the hardware platform.
 
 ## 5. Injection bitstream in FPGA
 
-Una volta creato il file .xclbin sarà possibile utilizzarlo mediante l'esecuzione dello script python launch.py. 
-Generalemte il file:
-  - Impora le librerie necessarie alla comunicazione con l'FPGA
-  - Effettua il caricamento dell'overlay dell'FPGA
-  - Gestisce l'utilizzo della memoria
-  - Effettua l'operazione sia su CPU che su FPGA e ne compara le tempistiche 
-  - Verifica dei risultati
-  - Liberazione dei risultati.
+Once the `.xclbin` file has been created, it will be possible to use it by running the python script launch.py. 
+Generally the file is used to allow interaction between the FPGA and CPU, and use the FPGA as a computational accelerator.
+The following are the main steps:
+  - Imports the libraries necessary for communication with the FPGA.
+  - Performs the loading of the FPGA overlay.
+  - Manages the memory usage of the FPGA.
+  - Performs the desired operation on both CPU and FPGA and compares the timings. 
+  - Collects the results provided by the accelerator.  
+  - Verifies that the results are equal.
+  - Hardware release.
