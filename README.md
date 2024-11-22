@@ -10,9 +10,9 @@ Per iniziare con il progetto **Workflow_FPGA_BOOST**, assicurati di avere i segu
   - Librerie di supporto per l'host e la piattaforma FPGA
   - Pacchetti di sviluppo per il sistema operativo ()
 
-- **Versione Vitis**: È richiesto Vitis **(versione minima: X.X)**, aggiornato per supportare le ultime funzionalità di progettazione FPGA.
+- `**Versione Vitis**`: È richiesto Vitis **(versione minima: X.X)**, aggiornato per supportare le ultime funzionalità di progettazione FPGA.
 
-- **Numero Seriale FPGA**: Identifica il numero seriale della tua FPGA tramite gli strumenti forniti (es. `xbutil`) e assicurati che sia configurata correttamente per l'accelerazione.
+- `**Numero Seriale FPGA**`: Identifica il numero seriale della tua FPGA tramite gli strumenti forniti (es. `xbutil`) e assicurati che sia configurata correttamente per l'accelerazione.
 
 > **Nota**: Verifica che il tuo ambiente sia correttamente configurato seguendo la documentazione ufficiale di Vitis e delle librerie FPGA specifiche.
 
@@ -23,17 +23,17 @@ For each project you wish to implement, a dedicated folder will be created with 
 
 Each project folder will contain the following main files:
 
-- **run_hls.tcl**:  This file is used to run the High-Level Synthesis (HLS) part of the project. It contains the bash scripts needed to synthesize the code into an FPGA-compatible format.
+- `**run_hls.tcl**`:  This file is used to run the High-Level Synthesis (HLS) part of the project. It contains the bash scripts needed to synthesize the code into an FPGA-compatible format.
   
-- **testbench.cc**: A C++ file that contains the testbench to verify the correct operation of the FPGA logic. It simulates the execution of the developed algorithm to validate the results before loading the design on the FPGA.
+- `**testbench.cc**`: A C++ file that contains the testbench to verify the correct operation of the FPGA logic. It simulates the execution of the developed algorithm to validate the results before loading the design on the FPGA.
 
-- **launch.py**:  A Python script that automates the design execution process by interfacing with the development tools to perform compilation, loading, and performance monitoring on the FPGA. Specifically, the script will allocate memory, convey data from the local to the FPGA, perform the required operations, transport the results obtained from the accelerator, and finally free memory and buffers from the hardware. 
+- `**launch.py**`:  A Python script that automates the design execution process by interfacing with the development tools to perform compilation, loading, and performance monitoring on the FPGA. Specifically, the script will allocate memory, convey data from the local to the FPGA, perform the required operations, transport the results obtained from the accelerator, and finally free memory and buffers from the hardware. 
 
 In addition, each folder will contain a subfolder called **`src`**, which contains:
 
-- **func.cc**: This file contains the C++ function implementations that will later be used in the FPGA logic implementation. And which will be called from the file **run_hls.tcl**, to fix them as top functions.
+- `**func.cc**`: This file contains the C++ function implementations that will later be used in the FPGA logic implementation. And which will be called from the file **run_hls.tcl**, to fix them as top functions.
 
-- **func.h**: The header file that declares the functions defined in `func.cc`, providing the necessary interfaces for their implementation in the FPGA.
+- `**func.h**`: The header file that declares the functions defined in `func.cc`, providing the necessary interfaces for their implementation in the FPGA.
 
 This structure allows clear management of the source code of the functions to be accelerated and separates the logic of testing, configuration, and implementation in the FPGA.
 
