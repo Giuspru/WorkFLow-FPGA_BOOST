@@ -1,3 +1,10 @@
+# WorkFLow-FPGA_BOOST
+A step by step guide for a FPGA project 
+
+# Progetto FPGA Accelerator
+
+Questa repository serve per tenere traccia dei vari passaggi necessari per sfruttare una FPGA come acceleratore di calcolo. Di seguito sono elencati i 5 punti fondamentali del progetto.
+
 ## 1. Prerequisiti
 
 Per iniziare con il progetto **Workflow_FPGA_BOOST**, assicurati di avere i seguenti prerequisiti:
