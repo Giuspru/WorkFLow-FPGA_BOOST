@@ -58,7 +58,7 @@ To compile the project as a binary image to be uploaded to the FPGA, you need to
 ```bash
 v++ -l -t hw --platform xilinx_u55c_gen3x16_xdma_3_202210_1 -o nomefile.xclbin ./path/filexport.xo
 ```
-The command compiles a hardware project intended to run on a specific FPGA platform. Specifically, we are creating a single binary file (filename.xclbin), which will be loaded onto the hardware platform.
+The command compiles a hardware project intended to run on a specific FPGA platform. Specifically, we are creating a single binary file (**`filename.xclbin`**), which will be loaded onto the hardware platform.
 
 ## 5. Injection bitstream in FPGA
 
