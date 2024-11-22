@@ -23,7 +23,7 @@ For each project you wish to implement, a dedicated folder will be created with 
 
 Each project folder will contain the following main files:
 
-- `**run_hls.tcl**`:  This file is used to run the High-Level Synthesis (HLS) part of the project. It contains the bash scripts needed to synthesize the code into an FPGA-compatible format.
+- **`run_hls.tcl`**:  This file is used to run the High-Level Synthesis (HLS) part of the project. It contains the bash scripts needed to synthesize the code into an FPGA-compatible format.
   
 - `**testbench.cc**`: A C++ file that contains the testbench to verify the correct operation of the FPGA logic. It simulates the execution of the developed algorithm to validate the results before loading the design on the FPGA.
 
