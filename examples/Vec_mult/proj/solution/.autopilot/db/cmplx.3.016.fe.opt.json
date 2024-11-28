@@ -1,0 +1,14 @@
+{
+  "0": {
+    "basicblocks": 4,
+    "calls": "",
+    "file": "func.cc",
+    "fileloc": 3,
+    "instructions": 53,
+    "loads": {
+      "T": 2
+    },
+    "name": "func",
+    "total_instructions": 53
+  }
+}

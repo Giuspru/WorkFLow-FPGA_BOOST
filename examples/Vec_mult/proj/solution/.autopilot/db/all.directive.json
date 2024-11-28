@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "func",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "func"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/giuspru/HLS/tutorial-2023/prova/run_hls.tcl",
+    "sourceLine": 18,
+    "success": true
+  }
+]

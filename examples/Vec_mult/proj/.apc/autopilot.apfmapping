@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
+  <source>
+    <originFiles name="func.cc" path="/home/giuspru/HLS/tutorial-2023/prova/src/func.cc"/>
+  </source>
+  <testbench>
+    <originFiles name="testbench.cc" path="/home/giuspru/HLS/tutorial-2023/prova/testbench.cc"/>
+  </testbench>
+</autopilotfilemapping:AutoPilotFileMapping>
