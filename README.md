@@ -1,6 +1,7 @@
+# WorkFLow-FPGA_BOOST
 ![Logo del progetto](./images/PHOTO-2024-11-28-12-11-03.jpg)
 
-# WorkFLow-FPGA_BOOST
+
 This guide is to keep track of the various steps required to take advantage of an FPGA as a computational accelerator. Listed below are the 5 key points of each project.
 
 ## 1. Prerequisites (Ask Mirko)
