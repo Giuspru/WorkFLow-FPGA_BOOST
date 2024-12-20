@@ -22,7 +22,7 @@ Per iniziare con il progetto **Workflow_FPGA_BOOST**, assicurati di avere i segu
 
 ## 2. Software Implementation
 
-For each project you wish to implement, a dedicated folder will be created with the name of the operation you intend to perform, or a name that clearly describes its purpose.
+For each project you wish to implement, a dedicated folder it will be created with the name of the operation you intend to perform, or a name that clearly describes its purpose.
 
 Each project folder will contain the following main files:
 
