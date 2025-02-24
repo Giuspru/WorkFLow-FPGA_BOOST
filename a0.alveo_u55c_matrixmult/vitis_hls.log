@@ -1,0 +1,108 @@
+
+****** Vitis HLS - High-Level Synthesis from C, C++ and OpenCL v2023.2 (64-bit)
+  **** SW Build 4023990 on Oct 11 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source /tools/Xilinx/Vitis_HLS/2023.2/scripts/vitis_hls/hls.tcl -notrace
+INFO: [HLS 200-10] Running '/tools/Xilinx/Vitis_HLS/2023.2/bin/unwrapped/lnx64.o/vitis_hls'
+INFO: [HLS 200-10] For user 'giuspru' on host 'vitis2' (Linux_x86_64 version 5.15.0-131-generic) on Mon Feb 24 10:40:37 CET 2025
+INFO: [HLS 200-10] On os Ubuntu 20.04.6 LTS
+INFO: [HLS 200-10] In directory '/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult'
+INFO: [HLS 200-2053] The vitis_hls executable is being deprecated. Consider using vitis-run --mode hls --tcl
+Sourcing Tcl script 'run_hls.tcl'
+INFO: [HLS 200-1510] Running: open_project -reset proj 
+INFO: [HLS 200-10] Opening and resetting project '/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj'.
+INFO: [HLS 200-1510] Running: set_top func 
+INFO: [HLS 200-1510] Running: add_files src/func.cc 
+INFO: [HLS 200-10] Adding design file 'src/func.cc' to the project
+INFO: [HLS 200-1510] Running: add_files -tb testbench.cc 
+INFO: [HLS 200-10] Adding test bench file 'testbench.cc' to the project
+INFO: [HLS 200-1510] Running: open_solution -reset solution -flow_target vitis 
+INFO: [HLS 200-10] Creating and opening solution '/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution'.
+INFO: [HLS 200-10] Cleaning up the solution database.
+INFO: [HLS 200-1505] Using flow_target 'vitis'
+Resolution: For help on HLS 200-1505 see docs.xilinx.com/access/sources/dita/topic?Doc_Version=2023.2%20English&url=ug1448-hls-guidance&resourceid=200-1505.html
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_latency=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_alignment_byte_size=64
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_interface -m_axi_max_widen_bitwidth=512
+INFO: [HLS 200-435] Setting 'open_solution -flow_target vitis' configuration: config_rtl -register_reset_num=3
+INFO: [HLS 200-1510] Running: set_part xcu55c-fsvh2892-2L-e 
+INFO: [HLS 200-1611] Setting target device to 'xcu55c-fsvh2892-2L-e'
+INFO: [HLS 200-1510] Running: create_clock -period 3.5 
+INFO: [SYN 201-201] Setting up clock 'default' with a period of 3.5ns.
+INFO: [HLS 200-1510] Running: csim_design -argv 2 6 
+INFO: [SIM 211-2] *************** CSIM start ***************
+INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
+INFO: [HLS 200-2036] Building debug C Simulation binaries
+   Compiling ../../../../testbench.cc in debug mode
+   Compiling ../../../../src/func.cc in debug mode
+   Generating csim.exe
+Will run 2 tests with max dimension 6
+Test 0, with dimension 5
+Matrix A
+   1094     715    1555    2132    2185 
+   1396     929    2036    1305    2486 
+   2573     887    2595     214    3790 
+   1955     459    1774    1119    3096 
+    643    1349    2986    1483     285 
+Matrix B
+    878     986    2545    1081     832 
+   2141    2589    4006     995    3930 
+   3768     851    3321    2936    3677 
+    788    2670    2015    3907    3304 
+    396    1572    3385     195    3969 
+
+Matrix C
+
+10895863 13380384 22504880 15215318 25154286 
+12899121 12906615 25080635 13994532 26477468 
+15605593 13571026 31979962 12858046 30918027 
+11491429 12480297 25440428 12754177 25938628 
+15985475 11075275 20910005 16653890 22847065 
+
+Matrix C from the FPGA simulation
+
+10895863 13380384 22504880 15215318 25154286 
+12899121 12906615 25080635 13994532 26477468 
+15605593 13571026 31979962 12858046 30918027 
+11491429 12480297 25440428 12754177 25938628 
+15985475 11075275 20910005 16653890 22847065 
+
+Test 1, with dimension 5
+Matrix A
+   2858     917    2141    3924    3932 
+   2936    3964    2399    2629     883 
+   2853    3186     170    1813    2761 
+    395    1231    1137    1454     258 
+    374    1915     609    2126    2428 
+Matrix B
+   3641    3710     142     981    3505 
+    624    1510    1883    2210    1837 
+   1280     330    2476     365    1686 
+   1523    1312    3372     965    1291 
+   3194     243     218    3238    3010 
+
+Matrix C
+
+32253726 18798144 21522567 22130209 32212749 
+23058501 21333687 22878530 17912430 27669131 
+24173270 18501169 13540618 20591566 26790260 
+6700193 5669812 10148407 5761524 8216498 
+14329144 7859476 12865113 14734783 15908445 
+
+Matrix C from the FPGA simulation
+
+32253726 18798144 21522567 22130209 32212749 
+23058501 21333687 22878530 17912430 27669131 
+24173270 18501169 13540618 20591566 26790260 
+6700193 5669812 10148407 5761524 8216498 
+14329144 7859476 12865113 14734783 15908445 
+
+INFO: [SIM 211-1] CSim done with 0 errors.
+INFO: [SIM 211-3] *************** CSIM finish ***************
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1.87 seconds. CPU system time: 0.49 seconds. Elapsed time: 2.36 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-112] Total CPU user time: 3.46 seconds. Total CPU system time: 0.75 seconds. Total elapsed time: 4.07 seconds; peak allocated memory: 260.676 MB.
+INFO: [Common 17-206] Exiting vitis_hls at Mon Feb 24 10:40:40 2025...
