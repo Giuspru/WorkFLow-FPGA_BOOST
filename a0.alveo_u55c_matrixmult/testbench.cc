@@ -12,9 +12,14 @@ int main(int argc, char **argv) {
     printf("Will run %u tests with max dimension %u\n", ntest, ndata);
     assert(ndata > 5 && ntest > 0);
     
-    // Allocate enough space for an ndata x ndata matrix.
+    // We are implementig 4 matices with dimention nxn
+    // Using dynamic array that automatically mange memory.
+    // ap_int s a fixed-size arbitrary precision integer from the Xilinx arbitrary-precision data types.
+    // We use ap_int because saves FPGA registers and memory resources
     std::vector<ap_int<16>> a(ndata * ndata), b(ndata * ndata);
     std::vector<ap_int<32>> c(ndata * ndata), c_ref(ndata * ndata);
+    
+    
     
     for (unsigned int itest = 0; itest < ntest; ++itest) {
         // Choose a random dimension n between 5 and ndata.

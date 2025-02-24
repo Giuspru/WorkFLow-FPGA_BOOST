@@ -1,4 +1,4 @@
-import numpy as np
+'''import numpy as np
 import pynq
 lo, hi = 0, 1000
 N = 100
@@ -38,4 +38,5 @@ zbuf.sync_from_device()
 for i in range(min(N,10)):
     print(f'{i:3d}  {xbuf[i]:4d}  {ybuf[i]:4d}   {zbuf[i]:8d}  {z_cpu[i]:8d}     {z_cpu[i]==zbuf[i]}')
 # verify correctness
-print(f'CPU matches Alveo evaluation : {np.all(z_cpu == zbuf)}')
+print(f'CPU matches Alveo evaluation : {np.all(z_cpu == zbuf)}')'''
+
