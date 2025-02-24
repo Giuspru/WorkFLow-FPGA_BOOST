@@ -4,7 +4,7 @@
 
 This guide is to keep track of the various steps required to take advantage of an FPGA as a computational accelerator. Listed below are the 5 key points of each project.
 
-## 1. Prerequisites (Ask Mirko :D )
+## 1. Prerequisites (Ask Mirko :DD )
 
 Per iniziare con il progetto **Workflow_FPGA_BOOST**, assicurati di avere i seguenti prerequisiti:
 
