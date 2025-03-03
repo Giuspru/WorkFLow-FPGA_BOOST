@@ -9,7 +9,7 @@ print(keys)
 
 
 matrix_mul = ol.func_1
-size = 2
+size = 13
 dimention = size * size
 
 
@@ -41,7 +41,7 @@ for i in range(size):
 end_cpu = time.time()
 cpu_time = end_cpu - start_cpu
 
-print("risultato moltiplicazione: " , z_cpu)
+print("\nrisultato moltiplicazione: " , z_cpu)
 print(f"Software multiplication completed in {cpu_time:.6f} seconds.\n")
 
 
@@ -53,7 +53,7 @@ y_buf.sync_to_device()
 
 matrix_mul.call(size,size,size, x_buf, y_buf, z_buf)
 z_buf.sync_from_device()
-print("\n########z_buf:  " , z_buf)
+print("\nRisultato moltiplicazione FPGA:  " , z_buf, "\n")
 
 end_fpga = time.time()
 fpga_time = end_fpga - start_fpga
@@ -69,8 +69,8 @@ else:
     print("ERROR: The FPGA and CPU results do not match.")
 # Optionally, print the first few elements of the results to verify
 print("\nSample Results:")
-print("CPU Result (first 10 elements):", z_cpu[:3])
-print("FPGA Result (first 10 elements):", z_buf[:3])
+print("CPU Result (first 10):", z_cpu[:10])
+print("FPGA Result (first 10 elements):", z_buf[:10])
 
 print(f"\nSummary of Execution Times:")
 print(f"Software (CPU) Multiplication Time: {cpu_time:.6f} seconds")
