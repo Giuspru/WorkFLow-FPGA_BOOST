@@ -1,0 +1,20 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Mon Mar  3 09:08:29 2025
+# Process ID: 3456309
+# Current directory: /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/impl/ip/vivado.log
+# Journal file: /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/impl/ip/vivado.jou
+# Running On: vitis2, OS: Linux, CPU Frequency: 3800.000 MHz, CPU Physical cores: 8, Host memory: 32983 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace
+ipx::create_core: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1381.746 ; gain = 10.930 ; free physical = 5698 ; free virtual = 102379
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.2/data/ip'.
+Running package_xo -xo_path /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/impl/export.xo -kernel_name func -kernel_xml /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/impl/ip/../kernel/kernel.xml -kernel_files {/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/src/func.cc /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/src/func.cc} -ip_directory /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/impl/ip/ip_unzip_dir -design_xml /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/.autopilot/db/func.design.xml -debug_directory /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/.debug -hls_directory /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/impl/ip/hls_files -kernel_json /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/solution_data.json
+INFO: [Common 17-206] Exiting Vivado at Mon Mar  3 09:08:39 2025...

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Mon Mar  3 09:08:29 2025
+# Process ID: 3456309
+# Current directory: /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/impl/ip
+# Command line: vivado -notrace -mode batch -source run_ippack.tcl
+# Log file: /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/impl/ip/vivado.log
+# Journal file: /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/impl/ip/vivado.jou
+# Running On: vitis2, OS: Linux, CPU Frequency: 3800.000 MHz, CPU Physical cores: 8, Host memory: 32983 MB
+#-----------------------------------------------------------
+source run_ippack.tcl -notrace

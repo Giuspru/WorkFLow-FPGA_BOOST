@@ -1,0 +1,330 @@
+--- !Failure
+Pass:            generate-ir-wrapper
+Name:            MAXIDepthUnspecified
+DebugLoc:        { File: src/func.cc, Line: 3, Column: 0 }
+Function:        _Z4funcjjjPK6ap_intILi16EES2_PS_ILi32EE
+Args:            
+  - String:          'A depth specification is required for MAXI interface port '''
+  - Name:            x
+  - String:          ''' for cosimulation.'
+...
+--- !Failure
+Pass:            generate-ir-wrapper
+Name:            MAXIDepthUnspecified
+DebugLoc:        { File: src/func.cc, Line: 3, Column: 0 }
+Function:        _Z4funcjjjPK6ap_intILi16EES2_PS_ILi32EE
+Args:            
+  - String:          'A depth specification is required for MAXI interface port '''
+  - Name:            'y'
+  - String:          ''' for cosimulation.'
+...
+--- !Failure
+Pass:            generate-ir-wrapper
+Name:            MAXIDepthUnspecified
+DebugLoc:        { File: src/func.cc, Line: 3, Column: 0 }
+Function:        _Z4funcjjjPK6ap_intILi16EES2_PS_ILi32EE
+Args:            
+  - String:          'A depth specification is required for MAXI interface port '''
+  - Name:            z
+  - String:          ''' for cosimulation.'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/func.cc, Line: 12, Column: 30 }
+Function:        _Z4funcjjjPK6ap_intILi16EES2_PS_ILi32EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_12_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: src/func.cc, Line: 12, Column: 30 }
+Function:        _Z4funcjjjPK6ap_intILi16EES2_PS_ILi32EE
+Args:            
+  - String:          'Sequential '
+  - Direction:       read
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgepseq
+  - ArrayName:       x
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_12_3
+  - String:          ' '
+  - LoopLoc:         'src/func.cc:12:30'
+  - String:          ' '
+  - Function:        'func(unsigned int, unsigned int, unsigned int, ap_int<16> const*, ap_int<16> const*, ap_int<32>*)'
+    DebugLoc:        { File: src/func.cc, Line: 3, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: src/func.cc, Line: 13, Column: 32 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.12
+...
+--- !Passed
+Pass:            reflow-burst-inference
+Name:            BurstInferred
+DebugLoc:        { File: src/func.cc, Line: 9, Column: 25 }
+Function:        _Z4funcjjjPK6ap_intILi16EES2_PS_ILi32EE
+Args:            
+  - String:          'Sequential '
+  - Direction:       write
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length'
+  - String:          ' has been inferred'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        scevgep14seq
+  - ArrayName:       z
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_9_2
+  - String:          ' '
+  - LoopLoc:         'src/func.cc:9:25'
+  - String:          ' '
+  - Function:        'func(unsigned int, unsigned int, unsigned int, ap_int<16> const*, ap_int<16> const*, ap_int<32>*)'
+    DebugLoc:        { File: src/func.cc, Line: 3, Column: 0 }
+  - String:          ' '
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      store
+    DebugLoc:        { File: src/func.cc, Line: 15, Column: 22 }
+  - OrigDirection:   write
+  - OrigID:          for.inc17.store.5
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: src/func.cc, Line: 13, Column: 32 }
+Function:        _Z4funcjjjPK6ap_intILi16EES2_PS_ILi32EE
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      load
+    DebugLoc:        { File: src/func.cc, Line: 13, Column: 32 }
+  - OrigDirection:   read
+  - OrigID:          for.inc.load.15
+  - ArrayName:       'y'
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_12_3
+  - String:          ' '
+  - LoopLoc:         'src/func.cc:12:30'
+  - String:          ' '
+  - Function:        'func(unsigned int, unsigned int, unsigned int, ap_int<16> const*, ap_int<16> const*, ap_int<32>*)'
+    DebugLoc:        { File: src/func.cc, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            CouldNotAnalyzePattern
+DebugLoc:        { File: src/func.cc, Line: 12, Column: 30 }
+Function:        _Z4funcjjjPK6ap_intILi16EES2_PS_ILi32EE
+Args:            
+  - String:          Could not analyze pattern
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: src/func.cc, Line: 12, Column: 30 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       x
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_9_2
+  - String:          ' '
+  - LoopLoc:         'src/func.cc:9:25'
+  - String:          ' '
+  - Function:        'func(unsigned int, unsigned int, unsigned int, ap_int<16> const*, ap_int<16> const*, ap_int<32>*)'
+    DebugLoc:        { File: src/func.cc, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-inference
+Name:            IncompatibleStride
+DebugLoc:        { File: src/func.cc, Line: 9, Column: 25 }
+Function:        _Z4funcjjjPK6ap_intILi16EES2_PS_ILi32EE
+Args:            
+  - String:          Stride is incompatible
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: src/func.cc, Line: 9, Column: 25 }
+  - OrigDirection:   write
+  - OrigID:          scevgep14seq
+  - ArrayName:       z
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_8_1
+  - String:          ' '
+  - LoopLoc:         'src/func.cc:8:18'
+  - String:          ' '
+  - Function:        'func(unsigned int, unsigned int, unsigned int, ap_int<16> const*, ap_int<16> const*, ap_int<32>*)'
+    DebugLoc:        { File: src/func.cc, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualAlignment
+DebugLoc:        { File: src/func.cc, Line: 9, Column: 25 }
+Function:        _Z4funcjjjPK6ap_intILi16EES2_PS_ILi32EE
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i32
+  - String:          ' size is greater than or equal to alignment '
+  - Alignment:       '4'
+  - String:          '(bytes)'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: src/func.cc, Line: 9, Column: 25 }
+  - OrigDirection:   write
+  - OrigID:          scevgep14seq
+  - ArrayName:       z
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_9_2
+  - String:          ' '
+  - LoopLoc:         'src/func.cc:9:25'
+  - String:          ' '
+  - Function:        'func(unsigned int, unsigned int, unsigned int, ap_int<16> const*, ap_int<16> const*, ap_int<32>*)'
+    DebugLoc:        { File: src/func.cc, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Missed
+Pass:            reflow-burst-widen
+Name:            GreaterOrEqualAlignment
+DebugLoc:        { File: src/func.cc, Line: 12, Column: 30 }
+Function:        _Z4funcjjjPK6ap_intILi16EES2_PS_ILi32EE
+Args:            
+  - String:          'Could not widen since type '
+  - Type:            i16
+  - String:          ' size is greater than or equal to alignment '
+  - Alignment:       '2'
+  - String:          '(bytes)'
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: src/func.cc, Line: 12, Column: 30 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       x
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_12_3
+  - String:          ' '
+  - LoopLoc:         'src/func.cc:12:30'
+  - String:          ' '
+  - Function:        'func(unsigned int, unsigned int, unsigned int, ap_int<16> const*, ap_int<16> const*, ap_int<32>*)'
+    DebugLoc:        { File: src/func.cc, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/func.cc, Line: 12, Column: 30 }
+Function:        _Z4funcjjjPK6ap_intILi16EES2_PS_ILi32EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_12_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/func.cc, Line: 12, Column: 30 }
+Function:        _Z4funcjjjPK6ap_intILi16EES2_PS_ILi32EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_12_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...
+--- !Missed
+Pass:            reflow-supported-subset
+Name:            MismatchPortAndBurstAccessWidth
+DebugLoc:        { File: src/func.cc, Line: 12, Column: 30 }
+Function:        _Z4funcjjjPK6ap_intILi16EES2_PS_ILi32EE
+Args:            
+  - String:          Inferred burst reverted due to burst accesses data width is different from m_axi port width
+  - String:          ' _XLX_SEP_ '
+  - OrigAccess:      call
+    DebugLoc:        { File: src/func.cc, Line: 12, Column: 30 }
+  - OrigDirection:   read
+  - OrigID:          scevgepseq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      x
+  - String:          ' '
+  - Function:        'func(unsigned int, unsigned int, unsigned int, ap_int<16> const*, ap_int<16> const*, ap_int<32>*)'
+    DebugLoc:        { File: src/func.cc, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredVerboseSummary
+DebugLoc:        { File: src/func.cc, Line: 9, Column: 25 }
+Function:        _Z4funcjjjPK6ap_intILi16EES2_PS_ILi32EE
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' has been inferred.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+  - String:          ' _XLX_SEP_ '
+  - AccessID:        seq
+  - ArrayName:       ''
+  - String:          ' '
+  - BundleName:      gmem
+  - String:          ' '
+  - LoopName:        VITIS_LOOP_9_2
+  - String:          ' '
+  - LoopLoc:         'src/func.cc:9:25'
+  - String:          ' '
+  - Function:        'func(unsigned int, unsigned int, unsigned int, ap_int<16> const*, ap_int<16> const*, ap_int<32>*)'
+    DebugLoc:        { File: src/func.cc, Line: 3, Column: 0 }
+  - String:          ' '
+...
+--- !Passed
+Pass:            reflow-burst-summary
+Name:            BurstInferredSummary
+DebugLoc:        { File: src/func.cc, Line: 9, Column: 25 }
+Function:        _Z4funcjjjPK6ap_intILi16EES2_PS_ILi32EE
+Args:            
+  - String:          'Multiple burst '
+  - Direction:       writes
+  - String:          ' of '
+  - Length:          variable
+  - String:          ' length and bit width '
+  - Width:           '32'
+  - String:          ' in loop '''
+  - LoopName:        VITIS_LOOP_9_2
+  - String:          '''('
+  - LoopLoc:         'src/func.cc:9:25'
+  - String:          ')'
+  - String:          ' has been inferred on bundle '''
+  - BundleName:      gmem
+  - String:          '''.'
+  - String:          ' These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings.'
+...
+--- !Passed
+Pass:            reflow-infer-unroll
+Name:            ImplicitUnroll
+DebugLoc:        { File: src/func.cc, Line: 12, Column: 30 }
+Function:        _Z4funcjjjPK6ap_intILi16EES2_PS_ILi32EE
+Args:            
+  - String:          'Loop '''
+  - LoopName:        VITIS_LOOP_12_3
+  - String:          ''' is marked as complete unroll implied by the pipeline pragma'
+...

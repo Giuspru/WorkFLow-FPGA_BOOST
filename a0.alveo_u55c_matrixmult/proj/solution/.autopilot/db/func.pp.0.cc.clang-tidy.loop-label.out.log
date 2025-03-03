@@ -1,0 +1,40 @@
+/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/.autopilot/db/func.pp.0.cc:1315:7: warning: Added loop label VITIS_LOOP_1207_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1207_1: 
+/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/.autopilot/db/func.pp.0.cc:1315:7: note: FIX-IT applied suggested code changes
+/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/.autopilot/db/func.pp.0.cc:2289:5: warning: Added loop label VITIS_LOOP_676_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_676_1: 
+/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/.autopilot/db/func.pp.0.cc:2289:5: note: FIX-IT applied suggested code changes
+/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/.autopilot/db/func.pp.0.cc:2303:5: warning: Added loop label VITIS_LOOP_690_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_690_1: 
+/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/.autopilot/db/func.pp.0.cc:2303:5: note: FIX-IT applied suggested code changes
+/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/.autopilot/db/func.pp.0.cc:2317:5: warning: Added loop label VITIS_LOOP_704_1:   [xilinx-label-all-loops]
+    for (unsigned i = low; i != high; ++i) {
+    ^~~
+    VITIS_LOOP_704_1: 
+/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/.autopilot/db/func.pp.0.cc:2317:5: note: FIX-IT applied suggested code changes
+/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/.autopilot/db/func.pp.0.cc:3946:7: warning: Added loop label VITIS_LOOP_1247_1:   [xilinx-label-all-loops]
+      for (i = 0; i < __N - 1; ++i) {
+      ^~~
+      VITIS_LOOP_1247_1: 
+/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/.autopilot/db/func.pp.0.cc:3946:7: note: FIX-IT applied suggested code changes
+/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/.autopilot/db/func.pp.0.cc:5734:2: warning: Added loop label VITIS_LOOP_8_1:   [xilinx-label-all-loops]
+ for(int i=0; i<M ;i++){
+ ^~~
+ VITIS_LOOP_8_1: 
+/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/.autopilot/db/func.pp.0.cc:5734:2: note: FIX-IT applied suggested code changes
+/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/.autopilot/db/func.pp.0.cc:5735:9: warning: Added loop label VITIS_LOOP_9_2:   [xilinx-label-all-loops]
+        for(int j=0;j<N; j++){
+        ^~~
+        VITIS_LOOP_9_2: 
+/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/.autopilot/db/func.pp.0.cc:5735:9: note: FIX-IT applied suggested code changes
+/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/.autopilot/db/func.pp.0.cc:5738:13: warning: Added loop label VITIS_LOOP_12_3:   [xilinx-label-all-loops]
+            for(int k=0; k<K; k++){
+            ^~~
+            VITIS_LOOP_12_3: 
+/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/.autopilot/db/func.pp.0.cc:5738:13: note: FIX-IT applied suggested code changes

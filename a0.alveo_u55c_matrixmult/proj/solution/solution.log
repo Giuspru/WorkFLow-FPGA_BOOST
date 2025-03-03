@@ -20,4 +20,86 @@ INFO: [SIM 211-4] CSIM will launch GCC as the compiler.
 INFO: [HLS 200-2036] Building debug C Simulation binaries
 INFO: [SIM 211-1] CSim done with 0 errors.
 INFO: [SIM 211-3] *************** CSIM finish ***************
-INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1.92 seconds. CPU system time: 0.46 seconds. Elapsed time: 2.38 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-111] Finished Command csim_design CPU user time: 1.93 seconds. CPU system time: 0.4 seconds. Elapsed time: 2.35 seconds; current allocated memory: 0.000 MB.
+INFO: [HLS 200-1510] Running: csynth_design 
+INFO: [HLS 200-111] Finished File checks and directory preparation: CPU user time: 0.07 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.08 seconds; current allocated memory: 261.039 MB.
+INFO: [HLS 200-10] Analyzing design file 'src/func.cc' ... 
+INFO: [HLS 200-111] Finished Source Code Analysis and Preprocessing: CPU user time: 2.4 seconds. CPU system time: 0.56 seconds. Elapsed time: 2.96 seconds; current allocated memory: 263.383 MB.
+INFO: [HLS 200-777] Using interface defaults for 'Vitis' flow target.
+INFO: [HLS 200-1995] There were 163 instructions in the design after the 'Compile/Link' phase of compilation. See the Design Size Report for more details: /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 58 instructions in the design after the 'Unroll/Inline (step 1)' phase of compilation. See the Design Size Report for more details: /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 46 instructions in the design after the 'Unroll/Inline (step 2)' phase of compilation. See the Design Size Report for more details: /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 65 instructions in the design after the 'Unroll/Inline (step 3)' phase of compilation. See the Design Size Report for more details: /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 65 instructions in the design after the 'Unroll/Inline (step 4)' phase of compilation. See the Design Size Report for more details: /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 61 instructions in the design after the 'Array/Struct (step 1)' phase of compilation. See the Design Size Report for more details: /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 61 instructions in the design after the 'Array/Struct (step 2)' phase of compilation. See the Design Size Report for more details: /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 61 instructions in the design after the 'Array/Struct (step 3)' phase of compilation. See the Design Size Report for more details: /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 61 instructions in the design after the 'Array/Struct (step 4)' phase of compilation. See the Design Size Report for more details: /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 67 instructions in the design after the 'Array/Struct (step 5)' phase of compilation. See the Design Size Report for more details: /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 68 instructions in the design after the 'Performance (step 1)' phase of compilation. See the Design Size Report for more details: /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 67 instructions in the design after the 'Performance (step 2)' phase of compilation. See the Design Size Report for more details: /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 67 instructions in the design after the 'Performance (step 3)' phase of compilation. See the Design Size Report for more details: /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 67 instructions in the design after the 'Performance (step 4)' phase of compilation. See the Design Size Report for more details: /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 90 instructions in the design after the 'HW Transforms (step 1)' phase of compilation. See the Design Size Report for more details: /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/syn/report/csynth_design_size.rpt
+INFO: [HLS 200-1995] There were 93 instructions in the design after the 'HW Transforms (step 2)' phase of compilation. See the Design Size Report for more details: /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/proj/solution/syn/report/csynth_design_size.rpt
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'x' for cosimulation. (src/func.cc:3:0)
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'y' for cosimulation. (src/func.cc:3:0)
+WARNING: [HLS 214-386] A depth specification is required for MAXI interface port 'z' for cosimulation. (src/func.cc:3:0)
+INFO: [HLS 214-291] Loop 'VITIS_LOOP_12_3' is marked as complete unroll implied by the pipeline pragma (src/func.cc:12:30)
+INFO: [HLS 214-115] Multiple burst writes of variable length and bit width 32 in loop 'VITIS_LOOP_9_2'(src/func.cc:9:25) has been inferred on bundle 'gmem'. These burst requests might be further partitioned into multiple requests during RTL generation, based on max_read_burst_length or max_write_burst_length settings. (src/func.cc:9:25)
+INFO: [HLS 200-111] Finished Compiling Optimization and Transform: CPU user time: 1.99 seconds. CPU system time: 0.48 seconds. Elapsed time: 7.16 seconds; current allocated memory: 265.156 MB.
+INFO: [HLS 200-111] Finished Checking Pragmas: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0 seconds; current allocated memory: 265.156 MB.
+INFO: [HLS 200-10] Starting code transformations ...
+INFO: [HLS 200-111] Finished Standard Transforms: CPU user time: 0 seconds. CPU system time: 0 seconds. Elapsed time: 0.01 seconds; current allocated memory: 265.613 MB.
+INFO: [HLS 200-10] Checking synthesizability ...
+INFO: [HLS 200-111] Finished Checking Synthesizability: CPU user time: 0 seconds. CPU system time: 0.01 seconds. Elapsed time: 0.01 seconds; current allocated memory: 265.676 MB.
+INFO: [XFORM 203-502] Unrolling all sub-loops inside loop 'VITIS_LOOP_9_2' (src/func.cc:9) in function 'func' for pipelining.
+WARNING: [HLS 200-936] Cannot unroll loop 'VITIS_LOOP_12_3' (src/func.cc:12) in function 'func': cannot completely unroll a loop with a variable trip count.
+INFO: [HLS 200-111] Finished Loop, function and other optimizations: CPU user time: 0.04 seconds. CPU system time: 0 seconds. Elapsed time: 0.04 seconds; current allocated memory: 287.469 MB.
+INFO: [HLS 200-2060] Failed to convert nested loops 'VITIS_LOOP_9_2'(src/func.cc:9:25) and 'VITIS_LOOP_12_3'(src/func.cc:12:30) in function 'func' into perfectly nested loops.
+WARNING: [HLS 200-960] Cannot flatten loop 'VITIS_LOOP_8_1' (src/func.cc:8:18) in function 'func' the outer loop is not a perfect loop because there is nontrivial logic in the loop latch.
+INFO: [HLS 200-111] Finished Architecture Synthesis: CPU user time: 0.03 seconds. CPU system time: 0 seconds. Elapsed time: 0.03 seconds; current allocated memory: 287.469 MB.
+INFO: [HLS 200-10] Starting hardware synthesis ...
+INFO: [HLS 200-10] Synthesizing 'func' ...
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'func' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [HLS 200-486] Changing DSP latency (root=sum_1) to 3 in order to utilize available DSP registers.
+WARNING: [SCHED 204-65] Unable to satisfy pipeline directive for loop 'VITIS_LOOP_9_2': contains subloop(s) that are not unrolled or flattened.
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111] Finished Scheduling: CPU user time: 0.07 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.09 seconds; current allocated memory: 287.469 MB.
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+INFO: [HLS 200-111] Finished Binding: CPU user time: 0.05 seconds. CPU system time: 0 seconds. Elapsed time: 0.06 seconds; current allocated memory: 287.469 MB.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'func' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+WARNING: [RTGEN 206-101] Design contains AXI ports. Reset is fixed to synchronous and active low.
+INFO: [RTGEN 206-500] Setting interface mode on port 'func/gmem' to 'm_axi'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'func/M' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'func/K' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'func/N' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'func/x' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'func/y' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on port 'func/z' to 's_axilite & ap_none'.
+INFO: [RTGEN 206-500] Setting interface mode on function 'func' to 's_axilite & ap_ctrl_chain'.
+INFO: [RTGEN 206-100] Bundling port 'M', 'K', 'N', 'x', 'y', 'z' to AXI-Lite port control.
+INFO: [RTGEN 206-100] Generating core module 'mac_muladd_16s_16s_32ns_32_4_1': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'func'.
+INFO: [HLS 200-111] Finished Creating RTL model: CPU user time: 0.08 seconds. CPU system time: 0 seconds. Elapsed time: 0.08 seconds; current allocated memory: 287.469 MB.
+INFO: [HLS 200-111] Finished Generating all RTL models: CPU user time: 0.37 seconds. CPU system time: 0 seconds. Elapsed time: 0.38 seconds; current allocated memory: 287.641 MB.
+INFO: [HLS 200-1603] Design has inferred MAXI bursts and missed bursts, see Vitis HLS GUI synthesis summary report for detailed information.
+INFO: [HLS 200-111] Finished Updating report files: CPU user time: 0.48 seconds. CPU system time: 0.03 seconds. Elapsed time: 0.5 seconds; current allocated memory: 293.746 MB.
+INFO: [VHDL 208-304] Generating VHDL RTL for func.
+INFO: [VLOG 209-307] Generating Verilog RTL for func.
+INFO: [HLS 200-790] **** Loop Constraint Status: All loop constraints were satisfied.
+INFO: [HLS 200-789] **** Estimated Fmax: 391.39 MHz
+INFO: [HLS 200-111] Finished Command csynth_design CPU user time: 5.59 seconds. CPU system time: 1.13 seconds. Elapsed time: 11.41 seconds; current allocated memory: 33.070 MB.
+INFO: [HLS 200-1510] Running: export_design -format xo 
+INFO: [IMPL 213-8] Exporting RTL as a Vivado IP.
+INFO: [HLS 200-802] Generated output file proj/solution/impl/export.xo
+INFO: [HLS 200-111] Finished Command export_design CPU user time: 11.97 seconds. CPU system time: 0.7 seconds. Elapsed time: 21.84 seconds; current allocated memory: 5.629 MB.

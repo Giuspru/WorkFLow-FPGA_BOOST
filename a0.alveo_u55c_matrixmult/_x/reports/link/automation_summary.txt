@@ -1,0 +1,147 @@
+====================================================================
+Version:    xcd v2023.2 (64-bit)
+Copyright:  Copyright 1986-2023 Xilinx, Inc. All Rights Reserved.
+Created:    Mon Mar  3 11:20:35 2025
+====================================================================
+
+1. Kernel and compute unit information
+======================================
+
+Compute Unit: func_1
+Kernel: func
+Base Address: 0x800000
+Clock Pin: ap_clk
+Reset Pin: ap_rst_n
+
+2. Interface Connections
+========================
+
+IP to Compute Unit
+------------------
+Source Pin: SLR0/M01_AXI
+Destination Pin: func_1/s_axi_control
+
+Compute Unit to IP
+------------------
+Source Pin: func_1/m_axi_gmem
+Destination Pin: hmss_0/S01_AXI
+
+3. Clock Connections
+====================
+
+Compute Unit: func_1
+Clock ID: 0
+Platform Clock Frequency: 300.00 MHz
+Requested Kernel Clock Frequency: 300.00 MHz
+Achieved Kernel Clock Frequency: 300.00 MHz
+Source Pin: ulp_ucs/aclk_kernel_00
+Destination Pin: func_1/ap_clk
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_ctrl_00
+Destination Pin: ulp_ucs/aclk_ctrl
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_freerun_ref_00
+Destination Pin: ulp_ucs/aclk_freerun
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_freerun_ref_00
+Destination Pin: ulp_ucs/aclk_hbm_refclk
+
+Clock Instance: ulp_ucs
+Source Pin: ii_level0_wire/ulp_m_aclk_pcie_00
+Destination Pin: ulp_ucs/aclk_pcie
+
+4. Reset Connections
+====================
+
+Compute Unit: func_1
+Source Pin: proc_sys_reset_kernel_slr0/peripheral_aresetn
+Destination Pin: func_1/ap_rst_n
+Associated Clock Pin: func_1/ap_clk
+
+5. Clock Summary
+================
+
+PL
++----------+--------+------------+---------------+------------+
+| Instance | Kernel | Clock Port | Compile (MHz) | Link (MHz) |
++----------+--------+------------+---------------+------------+
+| func_1   | func   | ap_clk     | 285.71        | 300.00     |
++----------+--------+------------+---------------+------------+
+
+6. SLR Utilization per Compute Unit
+===================================
+
+Compute Unit: func_1
++------------+------+------+------+--------+--------+--------+
+| Site Type  | SLR0 | SLR1 | SLR2 | SLR0 % | SLR1 % | SLR2 % |
++------------+------+------+------+--------+--------+--------+
+| LUT        | 2253 |    0 |    0 |   0.51 |   0.00 |   0.00 |
+| LUTAsLogic | 1792 |    0 |    0 |   0.41 |   0.00 |   0.00 |
+| LUTAsMem   |  461 |    0 |    0 |   0.22 |   0.00 |   0.00 |
+| REG        | 2931 |    0 |    0 |   0.33 |   0.00 |   0.00 |
+| CARRY8     |  102 |    0 |    0 |   0.19 |   0.00 |   0.00 |
+| F7MUX      |  137 |    0 |    0 |   0.06 |   0.00 |   0.00 |
+| F8MUX      |    0 |    0 |    0 |   0.00 |   0.00 |   0.00 |
+| F9MUX      |    0 |    0 |    0 |   0.00 |   0.00 |   0.00 |
+| BRAM       |    1 |    0 |    0 |   0.15 |   0.00 |   0.00 |
+| URAM       |    0 |    0 |    0 |   0.00 |   0.00 |   0.00 |
+| DSPs       |    1 |    0 |    0 |   0.03 |   0.00 |   0.00 |
++------------+------+------+------+--------+--------+--------+
+
+7. Compute Unit Utilization per SLR
+===================================
+
+SLR0
++------------+--------+-----------+
+| Site Type  | func_1 | Available |
++------------+--------+-----------+
+| LUT        |   2253 |    439680 |
+| LUTAsLogic |   1792 |    439680 |
+| LUTAsMem   |    461 |    205440 |
+| REG        |   2931 |    879360 |
+| CARRY8     |    102 |     54960 |
+| F7MUX      |    137 |    219840 |
+| F8MUX      |      0 |    109920 |
+| F9MUX      |      0 |     54960 |
+| BRAM       |      1 |       672 |
+| URAM       |      0 |       320 |
+| DSPs       |      1 |      2880 |
++------------+--------+-----------+
+
+SLR1
++------------+--------+-----------+
+| Site Type  | func_1 | Available |
++------------+--------+-----------+
+| LUT        |      0 |    439680 |
+| LUTAsLogic |      0 |    439680 |
+| LUTAsMem   |      0 |    205440 |
+| REG        |      0 |    879360 |
+| CARRY8     |      0 |     54960 |
+| F7MUX      |      0 |    219840 |
+| F8MUX      |      0 |    109920 |
+| F9MUX      |      0 |     54960 |
+| BRAM       |      0 |       672 |
+| URAM       |      0 |       320 |
+| DSPs       |      0 |      2880 |
++------------+--------+-----------+
+
+SLR2
++------------+--------+-----------+
+| Site Type  | func_1 | Available |
++------------+--------+-----------+
+| LUT        |      0 |    439680 |
+| LUTAsLogic |      0 |    439680 |
+| LUTAsMem   |      0 |    205440 |
+| REG        |      0 |    879360 |
+| CARRY8     |      0 |     54960 |
+| F7MUX      |      0 |    219840 |
+| F8MUX      |      0 |    109920 |
+| F9MUX      |      0 |     54960 |
+| BRAM       |      0 |       672 |
+| URAM       |      0 |       320 |
+| DSPs       |      0 |      2880 |
++------------+--------+-----------+
+

@@ -1,0 +1,218 @@
+
+*** Running vivado
+    with args -log bd_22c0_aclk_kernel_01_adapt_0.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source bd_22c0_aclk_kernel_01_adapt_0.tcl
+
+
+****** Vivado v2023.2 (64-bit)
+  **** SW Build 4029153 on Fri Oct 13 20:13:54 MDT 2023
+  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+
+source bd_22c0_aclk_kernel_01_adapt_0.tcl -notrace
+INFO: Dispatch client connection id - 37993
+create_project: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1356.309 ; gain = 34.836 ; free physical = 7427 ; free virtual = 95549
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/_x/link/int/xo/ip_repo/xilinx_com_hls_func_1_0'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/_x/link/vivado/vpl/.local/hw_platform/iprepo'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/_x/link/vivado/vpl/.local/hw_platform/ipcache'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/tools/Xilinx/Vitis/2023.2/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.2/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:axis_clk_metadata_adapter:1.0'. The one found in IP location '/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/axis_clk_metadata_adapter_v1_0' will take precedence over the same IP in location /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/pxi_ii_infra/axis_clk_metadata_adapter_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:pipeline_reg:1.0'. The one found in IP location '/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/pipeline_reg_v1_0' will take precedence over the same IP in location /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/pxi_ii_infra/pipeline_reg_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:clk_metadata_adapter:1.0'. The one found in IP location '/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/clk_metadata_adapter_v1_0' will take precedence over the same IP in location /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/pxi_ii_infra/clk_metadata_adapter_v1_0
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:shell_utils_build_info:1.0'. The one found in IP location '/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/shell_utils_build_info_v1_0' will take precedence over the same IP in the Xilinx installed IP.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:axi_clk_metadata_adapter:1.0'. The one found in IP location '/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/other_ipdefs/axi_clk_metadata_adapter_v1_0' will take precedence over the same IP in location /home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/_x/link/vivado/vpl/.local/hw_platform/iprepo/ipdefs/pxi_ii_infra/axi_clk_metadata_adapter_v1_0
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: bd_22c0_aclk_kernel_01_adapt_0
+Command: synth_design -top bd_22c0_aclk_kernel_01_adapt_0 -part xcu55c-fsvh2892-2L-e -incremental_mode off -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xcu55c'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcu55c'
+INFO: [Device 21-403] Loading part xcu55c-fsvh2892-2L-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 1 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3493794
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 3143.395 ; gain = 388.680 ; free physical = 4106 ; free virtual = 92222
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'bd_22c0_aclk_kernel_01_adapt_0' [/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_ulp_ucs_0/bd_0/ip/ip_75/synth/bd_22c0_aclk_kernel_01_adapt_0.v:53]
+INFO: [Synth 8-6157] synthesizing module 'clk_metadata_adapter_v1_0_0' [/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/586a/hdl/clk_metadata_adapter_v1_0_vl_rfs.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'clk_metadata_adapter_v1_0_0' (0#1) [/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ipshared/586a/hdl/clk_metadata_adapter_v1_0_vl_rfs.v:48]
+INFO: [Synth 8-6155] done synthesizing module 'bd_22c0_aclk_kernel_01_adapt_0' (0#1) [/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/_x/link/vivado/vpl/prj/prj.gen/my_rm/bd/ulp/ip/ulp_ulp_ucs_0/bd_0/ip/ip_75/synth/bd_22c0_aclk_kernel_01_adapt_0.v:53]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3224.363 ; gain = 469.648 ; free physical = 3974 ; free virtual = 92091
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3236.238 ; gain = 481.523 ; free physical = 3971 ; free virtual = 92088
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 3236.238 ; gain = 481.523 ; free physical = 3971 ; free virtual = 92088
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3236.238 ; gain = 0.000 ; free physical = 3971 ; free virtual = 92088
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3264.273 ; gain = 0.000 ; free physical = 3924 ; free virtual = 92041
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3264.309 ; gain = 0.000 ; free physical = 3923 ; free virtual = 92040
+INFO: [Designutils 20-5008] Incremental synthesis strategy off
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 3264.309 ; gain = 509.594 ; free physical = 3201 ; free virtual = 91319
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xcu55c-fsvh2892-2L-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 3264.309 ; gain = 509.594 ; free physical = 3201 ; free virtual = 91319
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 3264.309 ; gain = 509.594 ; free physical = 3200 ; free virtual = 91318
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 3264.309 ; gain = 509.594 ; free physical = 3193 ; free virtual = 91312
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 9024 (col length:94)
+BRAMs: 4032 (col length: RAMB18 288 RAMB36 144)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-3330] design bd_22c0_aclk_kernel_01_adapt_0 has an empty top module
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 3264.309 ; gain = 509.594 ; free physical = 3115 ; free virtual = 91234
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 3639.148 ; gain = 884.434 ; free physical = 1129 ; free virtual = 89246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 3639.148 ; gain = 884.434 ; free physical = 1129 ; free virtual = 89246
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 3649.164 ; gain = 894.449 ; free physical = 1119 ; free virtual = 89237
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 3665.008 ; gain = 910.293 ; free physical = 1111 ; free virtual = 89230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 3665.008 ; gain = 910.293 ; free physical = 1111 ; free virtual = 89230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 3665.008 ; gain = 910.293 ; free physical = 1111 ; free virtual = 89230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 3665.008 ; gain = 910.293 ; free physical = 1111 ; free virtual = 89230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 3665.008 ; gain = 910.293 ; free physical = 1111 ; free virtual = 89230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 3665.008 ; gain = 910.293 ; free physical = 1111 ; free virtual = 89230
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 3665.008 ; gain = 910.293 ; free physical = 1111 ; free virtual = 89230
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 3665.008 ; gain = 882.223 ; free physical = 1110 ; free virtual = 89229
+Synthesis Optimization Complete : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 3665.016 ; gain = 910.293 ; free physical = 1110 ; free virtual = 89229
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3665.016 ; gain = 0.000 ; free physical = 1110 ; free virtual = 89229
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 3739.188 ; gain = 0.000 ; free physical = 1300 ; free virtual = 89419
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete | Checksum: abf3685d
+INFO: [Common 17-83] Releasing license: Synthesis
+25 Infos, 7 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:33 . Memory (MB): peak = 3739.223 ; gain = 2338.195 ; free physical = 1297 ; free virtual = 89415
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 3001.182; main = 2854.480; forked = 321.285
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 4551.434; main = 3739.191; forked = 988.281
+INFO: [Common 17-1381] The checkpoint '/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/_x/link/vivado/vpl/prj/prj.runs/bd_22c0_aclk_kernel_01_adapt_0_synth_1/bd_22c0_aclk_kernel_01_adapt_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP bd_22c0_aclk_kernel_01_adapt_0, cache-ID = bf4edd6f44da8bb6
+INFO: [Common 17-1381] The checkpoint '/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/_x/link/vivado/vpl/prj/prj.runs/bd_22c0_aclk_kernel_01_adapt_0_synth_1/bd_22c0_aclk_kernel_01_adapt_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file bd_22c0_aclk_kernel_01_adapt_0_utilization_synth.rpt -pb bd_22c0_aclk_kernel_01_adapt_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Mar  3 10:01:45 2025...

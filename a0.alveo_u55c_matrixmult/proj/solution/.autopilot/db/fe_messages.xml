@@ -1,0 +1,30 @@
+<xilinx:hls_fe_msgs>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/run_hls.tcl:15:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaContext="directive" ARG_PragmaFunction="func" ARG_PragmaIsValid="1" ARG_PragmaOptions="name=func" ARG_PragmaType="top" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/func.cc:4:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="func" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=x offset=slave bundle=gmem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/func.cc:5:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="func" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=y offset=slave bundle=gmem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/func.cc:6:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="func" ARG_PragmaIsValid="1" ARG_PragmaOptions="mode=m_axi port=z offset=slave bundle=gmem" ARG_PragmaType="interface" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_VERBOSE_DUMP" msg_id="207-5471" msg_severity="WARNING" msg_loc="src/func.cc:10:9" msg_body="HLS pragma dump">
+        <args ARG_PragmaFunction="func" ARG_PragmaIsValid="1" ARG_PragmaType="pipeline" ClangWarningOption="dump-hls-pragmas"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-386" msg_severity="WARNING" msg_loc="src/func.cc:3:0" msg_body="A depth specification is required for MAXI interface port 'x' for cosimulation.">
+        <args Name="x"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-386" msg_severity="WARNING" msg_loc="src/func.cc:3:0" msg_body="A depth specification is required for MAXI interface port 'y' for cosimulation.">
+        <args Name="y"/>
+    </msg>
+    <msg msg_groups="PRAGMA_INTERFACE" msg_id="214-386" msg_severity="WARNING" msg_loc="src/func.cc:3:0" msg_body="A depth specification is required for MAXI interface port 'z' for cosimulation.">
+        <args Name="z"/>
+    </msg>
+    <msg msg_groups="PRAGMA_UNROLL" msg_id="214-291" msg_severity="INFO" msg_loc="src/func.cc:12:30" msg_body="Loop 'VITIS_LOOP_12_3' is marked as complete unroll implied by the pipeline pragma">
+        <args LoopName="VITIS_LOOP_12_3"/>
+    </msg>
+</xilinx:hls_fe_msgs>
+

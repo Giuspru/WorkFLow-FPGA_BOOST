@@ -1,0 +1,23 @@
+[
+  {
+    "functionLabel": "",
+    "functionName": "func",
+    "id": 0,
+    "ifcond": "",
+    "insert_position": "",
+    "label": "",
+    "pragma": {
+      "name": "TOP",
+      "option": [
+        {
+          "name": "name",
+          "value": "func"
+        }
+      ]
+    },
+    "slx": false,
+    "sourceFile": "/home/giuspru/HLS/tutorial-2023/a0.alveo_u55c_matrixmult/run_hls.tcl",
+    "sourceLine": 15,
+    "success": true
+  }
+]

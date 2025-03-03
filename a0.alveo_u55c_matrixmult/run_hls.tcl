@@ -12,9 +12,9 @@ create_clock -period 3.5
 csim_design -argv "2 6"
 
 # synthethize the algorithm
-# csynth_design
+csynth_design
 
-# export_design -format xo
+export_design -format xo
 
-quit
+exit
 
